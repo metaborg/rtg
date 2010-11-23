@@ -1,0 +1,18 @@
+regular tree grammar
+
+start 
+  X
+
+productions
+
+	X -> f(<string>, X)
+	   | f(B)
+
+	/* nonterminal not declared */
+	X -> W
+
+	/* nonterminal not reachable */
+	A -> f(B)
+
+	B -> <int>
+  B -> <string>

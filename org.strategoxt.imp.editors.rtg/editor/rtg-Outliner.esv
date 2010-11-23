@@ -1,0 +1,12 @@
+module rtg-Outliner
+
+outliner
+  
+  // This file can be used for custom outliner rules.
+  //
+  // See the imported file for a brief introduction and examples.
+
+  // FIXME: org.strategoxt.imp.runtime.services.LabelProvider isn't smart
+  // enough to figure out what to display as captions in the outline view.
+
+  //ProdRule.ProdRule

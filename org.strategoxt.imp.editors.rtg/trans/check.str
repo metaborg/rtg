@@ -1,0 +1,55 @@
+module check
+
+imports
+  libstratego-lib
+  include/rtg
+  lib/editor-common.generated
+
+rules
+
+  analyze:
+    t -> t
+    with
+      <topdown(try(record-nonterm))> t;
+      <one(mark-reachable)> t
+
+  // Creates a mapping (GetProduction) from nonterminal -> production.
+  record-nonterm:
+    p@ ProdRule(Nonterm(Plain(x)), _) -> p
+    with
+      rules(
+        GetProduction :+ x -> p
+      )
+
+  // Marks productions as reachable (IsReachable).
+  mark-reachable:
+    t@ RTG(Start(xs), _) -> t
+    with
+      <all(try(mark-reachable))> xs
+
+  mark-reachable:
+    t@ Nonterm(Plain(x)) -> t
+    with
+      <bagof-GetProduction; all(mark-reachable)> x
+
+  mark-reachable:
+    p@ ProdRule(_, xs) -> p
+    with
+      if not(IsReachable) then //break cycles 
+        rules(
+          IsReachable :+ p -> p
+        );
+        <topdown(try(mark-reachable))> xs
+      end
+
+rules
+
+  regular-tree-grammar-error:
+    Nonterm(Plain(x)) -> (x, $[Nonterminal [x] is not declared])
+    where
+    	not(<GetProduction> x)
+
+  regular-tree-grammar-warning:
+    p@ProdRule(_, _) -> (p, $[Production is not reachable from the start symbol(s)])
+    where
+      not(<IsReachable> p)

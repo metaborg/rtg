@@ -1,0 +1,16 @@
+module rtg.main
+
+imports rtg-Builders rtg-Colorer rtg-Completions rtg-Folding rtg-Outliner rtg-References rtg-Syntax
+
+language General properties
+                  
+  name          : rtg
+  id            : org.strategoxt.imp.editors.rtg
+  extends       : Root
+                  
+  description   : "Spoofax/IMP-generated editor for the rtg language"
+  url           : http://strategoxt.org
+                  
+  extensions    : rtg
+  table         : syntax/rtg.text.tbl
+  start symbols : RTG

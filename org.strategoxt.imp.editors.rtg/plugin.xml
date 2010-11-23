@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?eclipse version="3.0"?>
+
+<plugin>
+       <extension point="org.eclipse.imp.runtime.languageDescription">
+          <language extensions="rtg" description="rtg" language="rtg" derivedFrom="DynamicRoot" validator="org.strategoxt.imp.editors.rtg.RtgValidator" validatorClass="org.strategoxt.imp.editors.rtg.RtgValidator"></language>
+       </extension>
+       <extension id="org.strategoxt.imp.editors.rtg.parser" name="rtg Parser" point="org.eclipse.imp.runtime.parser">
+          <parser class="org.strategoxt.imp.editors.rtg.RtgParseController" language="rtg">
+          </parser>
+       </extension>    
+    </plugin>

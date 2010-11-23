@@ -1,0 +1,38 @@
+module rtg-Completions
+
+imports rtg-Completions.generated
+
+completions
+
+  // This file is used to define content completion.
+  //
+  // See the imported file for a brief introduction and examples.
+
+
+completions
+
+  // Syntax completion:
+
+/*
+  // basic file structure
+  completion template :
+    RTG = "regular tree grammar\nstart\nproductions" (blank)
+
+  // a set of productions that will be converted to List(Foo) by rtg2sig
+  completion template :
+    ProdRule =
+      "ListStarOfFoo -> ListPlusOfFoo\n"
+      "ListStarOfFoo -> <nil>()\n"
+      "ListStarOfFoo -> <conc>(ListStarOfFoo, ListStarOfFoo)\n"
+      "ListPlusOfFoo -> <conc>(ListStarOfFoo, ListPlusOfFoo)\n"
+      "ListPlusOfFoo -> <conc>(ListPlusOfFoo, ListStarOfFoo)\n"
+      "ListPlusOfFoo -> <conc>(ListPlusOfFoo, ListPlusOfFoo)\n"
+      "ListPlusOfFoo -> <cons>(Foo, ListStarOfFoo)\n" (blank)
+*/
+
+completions
+  // Semantic (identifier) completion:
+
+  completion proposer                  : editor-complete
+
+  //completion trigger                   : ":"
