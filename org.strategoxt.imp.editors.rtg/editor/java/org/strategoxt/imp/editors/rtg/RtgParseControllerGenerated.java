@@ -33,7 +33,12 @@ public class RtgParseControllerGenerated extends DynamicParseController
     return descriptor;
   }
 
-  private static void createDescriptor()
+  protected static synchronized void setDescriptor(Descriptor descriptor)
+  { 
+    RtgParseControllerGenerated.descriptor = descriptor;
+  }
+
+  protected static void createDescriptor()
   { 
     try
     { 
