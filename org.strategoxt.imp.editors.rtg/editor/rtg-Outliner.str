@@ -1,0 +1,13 @@
+module editor/rtg-Outliner
+
+imports
+  
+  include/rtg
+  lib/runtime/editor/outline-library
+  lib/runtime/editor/origins
+  editor/rtg-Outliner.generated
+
+rules
+  
+  to-outline-label = fail
+  
