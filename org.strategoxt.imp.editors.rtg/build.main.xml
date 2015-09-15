@@ -4,7 +4,7 @@
 	<property name="sdfmodule" value="rtg" />
 	<property name="metasdfmodule" value="Stratego-rtg" />
 	<property name="esvmodule" value="rtg" />
-	<property name="strmodule" value="rtg" />
+	<property name="strmodule" value="rtg-main" />
 	<property name="ppmodule" value="rtg-pp"/>
     <property name="sigmodule" value="rtg-sig"/>
 
@@ -50,7 +50,7 @@
 	<import file="build.generated.xml" />
 
 	<!-- Main target -->
-	<target name="all" depends="spoofaximp.default.ctree" />
+	<target name="all" depends="spoofaximp.default.jar" />
 	<target name="generate-sources" depends="generate-sources-java" />
 	<target name="package" depends="package-java" />
 </project>

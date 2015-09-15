@@ -10,8 +10,7 @@ builders
   // See the imported file for a brief introduction and examples.     
 
 builders
-                                                                                                                               
-  provider                  : include/rtg.ctree                                                                                
+                                                                                                                                                                                                   
   provider                  : include/rtg-java.jar                                                                             
                                                                                                                                
   observer                  : editor-analyze                                                                                   
