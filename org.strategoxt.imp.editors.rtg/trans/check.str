@@ -2,8 +2,8 @@ module check
 
 imports
   libstratego-lib
-  include/rtg
-  lib/editor-common.generated
+  rtg
+  editor-common.generated
 
 rules
 

@@ -1,11 +1,11 @@
-module rtg
+module rtg-main
 
 imports
   libstratego-lib
   libstratego-gpp
   libstratego-aterm
-  include/rtg
-  lib/editor-common.generated
+  rtg
+  editor-common.generated
   check
 
 rules // Main editor interface (defined by editor/rtg-Builders and -References.esv)

@@ -2,10 +2,10 @@ module editor/rtg-Outliner
 
 imports
   
-  include/rtg
-  lib/runtime/editor/outline-library
-  lib/runtime/editor/origins
-  editor/rtg-Outliner.generated
+  rtg
+  runtime/editor/outline-library
+  runtime/editor/origins
+  rtg-Outliner.generated
 
 rules
   
