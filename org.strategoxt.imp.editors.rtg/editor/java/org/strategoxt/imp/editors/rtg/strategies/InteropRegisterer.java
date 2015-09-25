@@ -9,6 +9,6 @@ package org.strategoxt.imp.editors.rtg.strategies;
        public class InteropRegisterer extends JavaInteropRegisterer {
 
          public InteropRegisterer() {
-           super(new Strategy[] { java_strategy_0_0.instance });
+           super(new Strategy[] {});
          }
        }
