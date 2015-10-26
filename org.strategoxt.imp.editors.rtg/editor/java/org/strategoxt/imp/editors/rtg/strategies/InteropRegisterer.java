@@ -1,7 +1,6 @@
 package org.strategoxt.imp.editors.rtg.strategies;
 
        import org.strategoxt.lang.JavaInteropRegisterer;
-       import org.strategoxt.lang.Strategy;
 
        /**
         * Helper class for {@link java_strategy_0_0}.
@@ -9,6 +8,6 @@ package org.strategoxt.imp.editors.rtg.strategies;
        public class InteropRegisterer extends JavaInteropRegisterer {
 
          public InteropRegisterer() {
-           super(new Strategy[] {});
+           super(new LibraryInitializer());
          }
        }
